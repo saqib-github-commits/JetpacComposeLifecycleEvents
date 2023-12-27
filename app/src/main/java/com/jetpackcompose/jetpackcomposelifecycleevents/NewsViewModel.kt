@@ -1,5 +1,6 @@
 package com.jetpackcompose.jetpackcomposelifecycleevents
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jetpackcompose.jetpackcomposelifecycleevents.repository.NewsRepository
@@ -10,9 +11,9 @@ class NewsViewModel (
     private val newsRepository: NewsRepository = NewsRepositoryImpl()
 ) : ViewModel() {
 
-    init {
-        fetchNews()
-    }
+//    init {
+//        fetchNews()
+//    }
 
     fun fetchNews() {
         viewModelScope.launch {

@@ -19,7 +19,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NewsScreenWithViewModelAsLifecycleObserver()
+                    NewsScreenBasicExample()
+
+                    //NewsScreenWithViewModelAsLifecycleObserver()
                 }
             }
         }

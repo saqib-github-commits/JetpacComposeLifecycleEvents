@@ -1,5 +1,6 @@
 package com.jetpackcompose.jetpackcomposelifecycleevents
 
+import android.util.Log
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -65,6 +66,7 @@ fun NewsScreenBasicExample(
     viewModel: NewsViewModel = NewsViewModel(),
     lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current
 ) {
+
     var lifecycleEvent by remember { mutableStateOf(Lifecycle.Event.ON_ANY) }
     DisposableEffect(lifecycleOwner) {
         val lifecycleObserver = LifecycleEventObserver { _, event ->
@@ -88,4 +90,15 @@ fun NewsScreenBasicExample(
     LazyColumn {
         // list of news
     }
+}
+
+@Composable
+fun NewsScreen(
+    viewModel: NewsViewModel = NewsViewModel()
+) {
+    // will use to display news
+    LazyColumn {
+        // list of news
+    }
+
 }
